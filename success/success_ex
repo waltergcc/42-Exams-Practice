@@ -1,10 +1,8 @@
-rev_print
-alpha_mirror
-ft_atoi_base
-sort_list
-first_word
-ft_atoi
 ulstr
 ft_strdup
 ft_rrange
 rostring
+ft_strlen
+print_bits
+expand_str
+rev_wstr

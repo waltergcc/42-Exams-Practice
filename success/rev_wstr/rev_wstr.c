@@ -74,30 +74,26 @@ char	**ft_split(char *s)
 	return (words);
 }
 
-void	rostring(char *s)
+void	rev_wstr(char *s)
 {
 	char **words = ft_split(s);
-	char *last = words[0];
-	int size = ft_count_words(s);
-	int i = 1;
-	while (i < size)
+	int i = ft_count_words(s) - 1;
+	while (i >= 0)
 	{
 		ft_putstr(words[i]);
-		if (i != size)
+		if (i != 0)
 			ft_putstr(" ");
 		free(words[i]);
-		i++;
+		i--;
 	}
-	ft_putstr(last);
-	free(last);
 	free(words);
 }
 
 int	main(int ac, char **av)
 {
-	if (ac > 1)
+	if (ac == 2)
 	{
-		rostring(av[1]);
+		rev_wstr(av[1]);
 	}
 	write(1, "\n", 1);
 }
