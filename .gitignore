@@ -1,0 +1,7 @@
+.subjects/
+.system/
+.gitattributes
+CONTRIBUTING.md
+LICENSE
+Makefile
+README.md
