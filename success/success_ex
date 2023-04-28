@@ -4,3 +4,7 @@ ft_atoi_base
 sort_list
 first_word
 ft_atoi
+ulstr
+ft_strdup
+ft_rrange
+rostring
