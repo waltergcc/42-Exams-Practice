@@ -18,3 +18,7 @@ first_word
 camel_to_snake
 epur_str
 ft_itoa
+ft_swap
+max
+ft_range
+flood_fill
