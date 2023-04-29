@@ -14,3 +14,7 @@ search_and_replace
 is_power_of_2
 lcm
 sort_list
+first_word
+camel_to_snake
+epur_str
+ft_itoa
