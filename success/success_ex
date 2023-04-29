@@ -6,3 +6,7 @@ ft_strlen
 print_bits
 expand_str
 rev_wstr
+rot_13
+ft_strcmp
+paramsum
+ft_split
