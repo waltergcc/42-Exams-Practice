@@ -10,3 +10,7 @@ rot_13
 ft_strcmp
 paramsum
 ft_split
+search_and_replace
+is_power_of_2
+lcm
+sort_list
