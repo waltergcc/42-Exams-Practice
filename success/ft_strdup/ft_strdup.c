@@ -11,24 +11,24 @@ int	ft_strlen(char *s)
 
 char    *ft_strdup(char *src)
 {
-	int i = ft_strlen(src);
-	char *s = (char *)malloc(sizeof(char) * (i + 1));
-	if (!s)
+	char *dup = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
+	if (!dup)
 		return (NULL);
-	i = 0;
+	int i = 0;
 	while (src[i])
 	{
-		s[i] = src[i];
-		i++; 
+		dup[i] = src[i];
+		i++;
 	}
-	s[i] = '\0';
-	return (s);
+	dup[i] = '\0';
+	return (dup);
 }
 /* 
 int	main(void)
 {
-	char src[] = "to be duplicated";
-	char *empty = ft_strdup(src);
+	char *empty;
+	char	s[] = "words and letters plus anything else";
+	empty = ft_strdup(s);
 	printf("%s\n", empty);
 	free(empty);
 } */

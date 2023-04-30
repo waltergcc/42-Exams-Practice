@@ -4,7 +4,6 @@ void	rstr_capitalizer(char *s)
 {
 	int i = 0;
 	int j = 0;
-
 	while (s[i])
 	{
 		if (s[i] >= 'A' && s[i] <= 'Z')
@@ -15,7 +14,7 @@ void	rstr_capitalizer(char *s)
 	while (s[i])
 	{
 		j = i + 1;
-		if (s[j] == ' ' || s[i] == '\t' || s[j] == '\0')
+		if (s[j] == ' ' || s[j] == '\t' || s[j] == '\0')
 			if (s[i] >= 'a' && s[i] <= 'z')
 				s[i] -= 32;
 		write(1, &s[i], 1);

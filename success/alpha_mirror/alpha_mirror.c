@@ -1,14 +1,21 @@
 #include <unistd.h>
 
+char	get_mirror(char c)
+{
+	if (c >= 'a' && c <= 'z')
+		return ('a' + 'z' - c);
+	else if (c >= 'A' && c <= 'Z')
+		return ('A' + 'Z' - c);
+	return (0);	
+}
+
 void	alpha_mirror(char *s)
 {
 	while (*s)
 	{
-		if (*s >= 'a' && *s <= 'z')
-			*s = 'a' + 'z' - *s;
-		if (*s >= 'A' && *s <= 'Z')
-			*s = 'A' + 'Z' - *s;
-		write(1, &*s, 1);
+		if ((*s >= 'a' && *s <= 'z') || (*s >= 'A' && *s <= 'Z'))
+			*s = get_mirror(*s);
+		write(1, *&s, 1);
 		s++;
 	}
 }

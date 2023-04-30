@@ -1,16 +1,17 @@
 #include <unistd.h>
+#include <limits.h>
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_putstr(char *str)
+void	ft_putstr(char *s)
 {
-	while (*str)
+	while (*s)
 	{
-		write(1, &*str, 1);
-		str++;
+		write(1, *&s, 1);
+		s++;
 	}
 }
 
@@ -26,39 +27,37 @@ void	ft_putnbr(long n)
 	ft_putchar(n % 10 + '0');
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(char *s)
 {
 	int r = 0;
-	int	sg = 1;
+	int sg = 1;
 
-	while (*str == ' ' || *str == '\t')
-		str++;
-	if (*str == '+' || *str == '-')
+	while (*s == ' ' || *s == '\t')
+		s++;
+	if (*s == '-' || *s == '+')
 	{
-		if (*str == '-')
+		if (*s == '-')
 			sg = -1;
-		str++;
+		s++;
 	}
-	while (*str >= '0' && *str <= '9')
+	while (*s >= '0' && *s <= '9')
 	{
-		r = r * 10 + (*str - '0');
-		str++;
+		r = r * 10 + (*s - '0');
+		s++;
 	}
-	return (r * sg);
+	return (sg * r);
 }
 
-void	tab_mult(int n)
+void	tab_mult(long n)
 {
 	int i = 1;
-	int sum = 0;
 	while (i <= 9)
 	{
-		sum = i * n;
 		ft_putnbr(i);
 		ft_putstr(" x ");
 		ft_putnbr(n);
 		ft_putstr(" = ");
-		ft_putnbr(sum);
+		ft_putnbr(n * i);
 		ft_putchar('\n');
 		i++;
 	}
@@ -69,8 +68,7 @@ int	main(int ac, char **av)
 	if (ac == 2)
 	{
 		long n = ft_atoi(av[1]);
-		long temp = n * 9;
-		if (temp <= 2147483647 && n >= 0)
+		if (n >= 0 && n * 9 <= INT_MAX)
 			tab_mult(n);
 	}
 	else

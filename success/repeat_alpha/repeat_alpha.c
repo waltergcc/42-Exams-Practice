@@ -1,30 +1,30 @@
 #include <unistd.h>
 
-int	ft_get_index(char c)
+int	get_index(char c)
 {
-	int i = 0;
 	if (c >= 'a' && c <= 'z')
-		i = c - 'a';
+		return (c - 'a' + 1);
 	else if (c >= 'A' && c <= 'Z')
-		i = c - 'A';
-	return (i);
+		return (c - 'A' + 1);
+	return (0);	
 }
 
 void	repeat_alpha(char *s)
 {
-	int i = 0;
+	int loop = 0;
 	while (*s)
 	{
 		if ((*s >= 'a' && *s <= 'z') || (*s >= 'A' && *s <= 'Z'))
 		{
-			i = ft_get_index(*s) + 1;
-			while (i--)
-				write(1, &*s, 1);
+			loop = get_index(*s);
+			while (loop--)
+				write(1, *&s, 1);
 		}
 		else
-			write(1, &*s, 1);
+			write(1, *&s, 1);
 		s++;
 	}
+
 }
 
 int	main(int ac, char **av)
