@@ -6,3 +6,15 @@ search_and_replace
 ft_strdup
 tab_mult
 ft_split
+rev_print
+swap_bits
+pgcd
+fprime
+rotone
+ft_strcmp
+expand_str
+rev_wstr
+first_word
+do_op
+hidenp
+ft_itoa
