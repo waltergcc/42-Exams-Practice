@@ -18,3 +18,11 @@ first_word
 do_op
 hidenp
 ft_itoa
+ft_strcpy
+last_word
+epur_str
+sort_list
+ft_putstr
+snake_to_camel
+lcm
+flood_fill
