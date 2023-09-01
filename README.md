@@ -6,5 +6,6 @@ In this repository you will find my resolutions for the exercises that I have be
 1. [Exam Rank 02](https://github.com/waltergcc/42-Exams-Practice/tree/main/exam_rank_02)
 2. [Exam Rank 03](https://github.com/waltergcc/42-Exams-Practice/tree/main/exam_rank_03)
 2. [Exam Rank 04](https://github.com/waltergcc/42-Exams-Practice/tree/main/exam_rank_04)
+2. [Exam Rank 05](https://github.com/waltergcc/42-Exams-Practice/tree/main/exam_rank_05)
 
 Good study! :smile:
